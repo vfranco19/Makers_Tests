@@ -1,0 +1,313 @@
+{
+    "execution_start": "09-10-2026 23:34:45",
+    "tests": [
+        {
+            "name": "Acceso a Inventory sin Login",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Navegar directo a https://www.saucedemo.com/inventory.html",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:46"
+                },
+                {
+                    "description": "Redirigido al login",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_47.png",
+                    "time": "23:34:47"
+                },
+                {
+                    "description": "Contenido de inventory no accesible",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:47"
+                }
+            ],
+            "start_time": "23:34:46",
+            "end_time": "23:34:47"
+        },
+        {
+            "name": "Login - Credenciales Correctas",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_49.png",
+                    "time": "23:34:49"
+                },
+                {
+                    "description": "Credenciales username: 'standard_user' password: 'secret_sauce'",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:49"
+                },
+                {
+                    "description": "Login exitoso",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_50.png",
+                    "time": "23:34:50"
+                }
+            ],
+            "start_time": "23:34:48",
+            "end_time": "23:34:50"
+        },
+        {
+            "name": "Login - Password Invalido",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_52.png",
+                    "time": "23:34:52"
+                },
+                {
+                    "description": "Credenciales username: 'standard_user' password: 'wrongpassword'",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:52"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Username and password do not match any user in this service",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:52"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_53.png",
+                    "time": "23:34:53"
+                }
+            ],
+            "start_time": "23:34:51",
+            "end_time": "23:34:53"
+        },
+        {
+            "name": "Login - Credenciales Vacias",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_55.png",
+                    "time": "23:34:55"
+                },
+                {
+                    "description": "Credenciales username: '' password: ''",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:55"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Username is required",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:56"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_57.png",
+                    "time": "23:34:57"
+                }
+            ],
+            "start_time": "23:34:54",
+            "end_time": "23:34:57"
+        },
+        {
+            "name": "Login - Username Vacio",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_34_59.png",
+                    "time": "23:34:59"
+                },
+                {
+                    "description": "Credenciales username: '' password: 'secret_sauce'",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:59"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Username is required",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:34:59"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_00.png",
+                    "time": "23:35:00"
+                }
+            ],
+            "start_time": "23:34:58",
+            "end_time": "23:35:00"
+        },
+        {
+            "name": "Login - Password Vacio",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_03.png",
+                    "time": "23:35:03"
+                },
+                {
+                    "description": "Credenciales username: 'standard_user' password: ''",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:03"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Password is required",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:03"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_04.png",
+                    "time": "23:35:04"
+                }
+            ],
+            "start_time": "23:35:02",
+            "end_time": "23:35:04"
+        },
+        {
+            "name": "Login - Usuario Inexistente",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_06.png",
+                    "time": "23:35:06"
+                },
+                {
+                    "description": "Credenciales username: 'fake@email.com' password: 'wrongpassword'",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:06"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Username and password do not match any user in this service",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:07"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_08.png",
+                    "time": "23:35:08"
+                }
+            ],
+            "start_time": "23:35:05",
+            "end_time": "23:35:08"
+        },
+        {
+            "name": "Login - Usuario Bloqueado",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_10.png",
+                    "time": "23:35:10"
+                },
+                {
+                    "description": "Credenciales username: 'locked_out_user' password: 'secret_sauce'",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:10"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Sorry, this user has been locked out.",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:10"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_11.png",
+                    "time": "23:35:11"
+                }
+            ],
+            "start_time": "23:35:09",
+            "end_time": "23:35:11"
+        },
+        {
+            "name": "Login - Credenciales Correctas con espacios en blanco",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_13.png",
+                    "time": "23:35:13"
+                },
+                {
+                    "description": "Credenciales username: 'standard_user ' password: 'secret_sauce ' con espacios en blanco",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:13"
+                },
+                {
+                    "description": "Mensaje de error visible: Epic sadface: Username and password do not match any user in this service",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:13"
+                },
+                {
+                    "description": "Mensaje de error visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_14.png",
+                    "time": "23:35:14"
+                }
+            ],
+            "start_time": "23:35:12",
+            "end_time": "23:35:14"
+        },
+        {
+            "name": "Login - Credenciales Correctas y Logout",
+            "status": "PASS",
+            "steps": [
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_16.png",
+                    "time": "23:35:16"
+                },
+                {
+                    "description": "Credenciales username: 'standard_user' password: 'secret_sauce'",
+                    "status": "PASS",
+                    "screenshot": null,
+                    "time": "23:35:16"
+                },
+                {
+                    "description": "Login exitoso",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_17.png",
+                    "time": "23:35:17"
+                },
+                {
+                    "description": "Pagina de login visible",
+                    "status": "PASS",
+                    "screenshot": "imagen_09_10_2026-23_35_19.png",
+                    "time": "23:35:19"
+                }
+            ],
+            "start_time": "23:35:15",
+            "end_time": "23:35:19"
+        }
+    ]
+}

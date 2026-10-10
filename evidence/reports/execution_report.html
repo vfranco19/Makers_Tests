@@ -1,0 +1,467 @@
+
+    <html>
+    <head>
+        <title>Execution Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+                background-color: #f4f6f8;
+                color: #222;
+            }
+            h1 { margin-bottom: 5px; }
+            .pass { color: #16a34a; font-weight: bold; }
+            .fail { color: #dc2626; font-weight: bold; }
+            .accordion {
+                background-color: #ffffff;
+                cursor: pointer;
+                padding: 16px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                font-size: 17px;
+                border-radius: 10px;
+                margin-top: 12px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                transition: 0.2s;
+            }
+            .accordion:hover { background-color: #f1f5f9; }
+            .accordion:after { content: '+'; float: right; font-weight: bold; font-size: 20px; }
+            .accordion.active:after { content: "\2212"; }
+            .panel {
+                padding: 0 18px;
+                background-color: white;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+                border-radius: 0 0 10px 10px;
+                margin-bottom: 20px;
+            }
+            .panel.open { padding: 16px; }
+            .panel p { margin: 6px 0; line-height: 1.4; }
+            .img-preview {
+                width: 260px;
+                border-radius: 10px;
+                border: 2px solid #ddd;
+                margin-top: 8px;
+                cursor: pointer;
+                transition: transform .15s ease, box-shadow .15s ease;
+            }
+            .img-preview:hover {
+                transform: scale(1.03);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            }
+            #modal {
+                display:none; position:fixed; z-index:9999;
+                left:0; top:0; width:100%; height:100%;
+                background-color: rgba(0,0,0,0.88);
+                justify-content:center; align-items:center;
+            }
+            #modal-img {
+                max-width:92%; max-height:92%;
+                border-radius:12px; border:4px solid #e5e7eb;
+                box-shadow:0 0 25px rgba(0,0,0,0.6);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Execution Report</h1>
+        <p><strong>Start:</strong> 09-10-2026 23:34:45</p>
+        <hr>
+    
+        <button class="accordion">
+            Acceso a Inventory sin Login -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:34:46</strong> —
+                Navegar directo a https://www.saucedemo.com/inventory.html —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:47</strong> —
+                Redirigido al login —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_47.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:34:47</strong> —
+                Contenido de inventory no accesible —
+                <span class="pass">PASS</span>
+            </p>
+            </div>
+        <button class="accordion">
+            Login - Credenciales Correctas -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:34:49</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_49.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:34:49</strong> —
+                Credenciales username: 'standard_user' password: 'secret_sauce' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:50</strong> —
+                Login exitoso —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_50.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Password Invalido -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:34:52</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_52.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:34:52</strong> —
+                Credenciales username: 'standard_user' password: 'wrongpassword' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:52</strong> —
+                Mensaje de error visible: Epic sadface: Username and password do not match any user in this service —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:53</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_53.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Credenciales Vacias -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:34:55</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_55.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:34:55</strong> —
+                Credenciales username: '' password: '' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:56</strong> —
+                Mensaje de error visible: Epic sadface: Username is required —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:57</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_57.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Username Vacio -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:34:59</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_34_59.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:34:59</strong> —
+                Credenciales username: '' password: 'secret_sauce' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:34:59</strong> —
+                Mensaje de error visible: Epic sadface: Username is required —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:00</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_00.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Password Vacio -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:35:03</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_03.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:35:03</strong> —
+                Credenciales username: 'standard_user' password: '' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:03</strong> —
+                Mensaje de error visible: Epic sadface: Password is required —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:04</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_04.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Usuario Inexistente -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:35:06</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_06.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:35:06</strong> —
+                Credenciales username: 'fake@email.com' password: 'wrongpassword' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:07</strong> —
+                Mensaje de error visible: Epic sadface: Username and password do not match any user in this service —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:08</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_08.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Usuario Bloqueado -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:35:10</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_10.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:35:10</strong> —
+                Credenciales username: 'locked_out_user' password: 'secret_sauce' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:10</strong> —
+                Mensaje de error visible: Epic sadface: Sorry, this user has been locked out. —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:11</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_11.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Credenciales Correctas con espacios en blanco -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:35:13</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_13.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:35:13</strong> —
+                Credenciales username: 'standard_user ' password: 'secret_sauce ' con espacios en blanco —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:13</strong> —
+                Mensaje de error visible: Epic sadface: Username and password do not match any user in this service —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:14</strong> —
+                Mensaje de error visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_14.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <button class="accordion">
+            Login - Credenciales Correctas y Logout -
+            <span class="pass">PASS</span>
+        </button>
+        <div class="panel">
+        
+            <p>
+                <strong>23:35:16</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_16.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:35:16</strong> —
+                Credenciales username: 'standard_user' password: 'secret_sauce' —
+                <span class="pass">PASS</span>
+            </p>
+            
+            <p>
+                <strong>23:35:17</strong> —
+                Login exitoso —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_17.png"
+                     onclick="openModal(this.src)">
+                
+            <p>
+                <strong>23:35:19</strong> —
+                Pagina de login visible —
+                <span class="pass">PASS</span>
+            </p>
+            
+                <img class="img-preview"
+                     src="../screenshots/imagen_09_10_2026-23_35_19.png"
+                     onclick="openModal(this.src)">
+                </div>
+        <div id="modal" onclick="closeModal()">
+            <img id="modal-img">
+        </div>
+        <script>
+            document.querySelectorAll(".accordion").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btn.classList.toggle("active");
+                    const panel = btn.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                        panel.classList.remove("open");
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        panel.classList.add("open");
+                    }
+                });
+            });
+            function openModal(src) {
+                document.getElementById("modal").style.display = "flex";
+                document.getElementById("modal-img").src = src;
+            }
+            function closeModal() {
+                document.getElementById("modal").style.display = "none";
+            }
+        </script>
+    </body>
+    </html>
+    
