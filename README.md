@@ -1,11 +1,11 @@
-# markers_test
+# makers_test
 
 Automatizacion web con **Selenium + pytest + Page Object Model**.
 
 ## Estructura
 
 ```
-markers_test/
+makers_test/
 ├── config/
 │   └── config.py          # URL, timeouts, credenciales
 ├── pages/
